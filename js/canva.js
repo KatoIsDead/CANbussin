@@ -14,15 +14,15 @@ window.addEventListener('mousemove', (e) => {
     // console.log(mouse);
 });
 
-var isClick = false;
+// var isClick = false;
 
-window.addEventListener('mousedown', () =>{
-    isClick = true;
-});
+// window.addEventListener('mousedown', () =>{
+//     isClick = true;
+// });
 
-window.addEventListener('mouseup', () =>{
-    isClick = false;
-});
+// window.addEventListener('mouseup', () =>{
+//     isClick = false;
+// });
 
 class Circle{
     constructor(x, y, r, dx, dy, color){
@@ -57,8 +57,8 @@ class Circle{
 
         // interactivity
         if(mouse.x - this.x < 60 && mouse.x - this.x > -60 && mouse.y - this.y < 60 && mouse.y - this.y > -60) {
-            if(this.r < 100 && isClick) this.r += 1;
-        }
+            if(this.r < 100) this.r += 1;
+        } //Remove the "&& isClick" if you want to remove the hold mouse button function in the program.
         else{
             if(this.r > 10) this.r -= 1;
         }
