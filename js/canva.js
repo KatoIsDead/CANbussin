@@ -37,7 +37,7 @@ class Circle{
     draw(){
         c.beginPath();
         c.arc(this.x, this.y, this.r, 0, Math.PI * 2, false);
-        c.strokeStyle = 'hsl(120 , 100% , 16%)';
+        c.strokeStyle = 'blue';
         c.fillStyle = this.color;
         c.fill();
         c.stroke();
@@ -77,7 +77,7 @@ function myVariablesForLoop(){
 }
 
 var circleArr = [];
-for (let i = 0; i < 500; i++) {
+for (let i = 0; i < 1200; i++) {
     myVariablesForLoop();
     circleArr.push(new Circle(x, y, r, dx, dy, color));
 }
@@ -88,8 +88,8 @@ function animate(){
     for (let i = 0; i < circleArr.length; i += 1) {
         circleArr[i].update();
     }
-    c.beginPath();
-    c.arc(mouse.x, mouse.y, 50 * 2, 0, Math.PI * 2, false);
-    c.stroke();
+    // c.beginPath();
+    // c.arc(mouse.x, mouse.y, 50 * 2, 0, Math.PI * 2, false);
+    // c.stroke();
 }
 animate();
