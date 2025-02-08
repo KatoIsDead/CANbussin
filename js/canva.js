@@ -26,12 +26,12 @@ window.addEventListener('mousemove', (e) => {
 
 class Circle{
     constructor(x, y, r, dx, dy, color){
-    this.x = x;
-    this.y = y;
-    this.r = r;
-    this.dx = dx;
-    this.dy = dy;
-    this.color = color;
+        this.x = x,
+        this.y = y,
+        this.r = r,
+        this.dx = dx,
+        this.dy = dy,
+        this.color = color
     }
 
     draw(){
